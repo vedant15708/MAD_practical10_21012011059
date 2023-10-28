@@ -16,7 +16,7 @@ class PersonAdepter(context: Context,val personArray:ArrayList<Person>):ArrayAda
         view.findViewById<TextView>(R.id.number_textView).text=personArray[position].phoneNO
         view.findViewById<TextView>(R.id.email_textView).text=personArray[position].emailId
         view.findViewById<TextView>(R.id.address_textView).text=personArray[position].address
-        view.findViewById<MaterialButton>(R.id.person_btn).setOnClickListener {
+        view.findViewById<MaterialButton>(R.id.location).setOnClickListener {
             Intent(context, MapsActivity::class.java).putExtra("Object", personArray[position])
                 .apply {
                     context.startActivity(this)
